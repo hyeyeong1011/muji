@@ -475,7 +475,7 @@ footer button span.active{
 
 
 /* 장바구니 팝업 */
-.pop-cartpage{display: none;}
+.pop-cartpage{display: none;} 
 
 .pop-cartpage .menuTop{
     height: 40px; border-bottom: 1px solid #000;
