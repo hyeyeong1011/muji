@@ -1,5 +1,5 @@
-// 슬라이드 =======================================
 $(function(){
+    // 슬라이드 =======================================
     var swiper1 = new Swiper('.swiper1', {
         pagination: {
             el: '.swiper1>.swiper-pagination',
@@ -36,16 +36,6 @@ $(function(){
 
 
     // 추천상품 ===============================================
-    // $('.product .wrap dt').each(function(){
-    //     var long=$(this).text().length;
-    //     // console.log(long);
-        
-    //     if(long>=13){
-    //         var short=$(this).text().substr(0,13)+"...";
-    //         $(this).text(short);
-    //     }
-    // })
-
     $('.product li').slice(0,6).show(); 
             
     $('.product>button').click(function(){
@@ -59,6 +49,7 @@ $(function(){
             }
         }
     })
+
 
     // 서비스 슬라이드 =========================================
     var swiper2 = new Swiper('.swiper2', {
@@ -75,35 +66,31 @@ $(function(){
         e.preventDefault();
     })
 
-    // 공지 =============================================
-    $(function(){     
-        function move(){
-            $('.notice1 ul li').first().slideUp(function(){
-                $(this).appendTo('.notice1 ul').show();
-            });
-        }
-        var play=setInterval(move,2000);
-    })
+
+    // 공지 =============================================   
+    function move(){
+        $('.notice1 ul li').first().slideUp(function(){
+            $(this).appendTo('.notice1 ul').show();
+        });
+    }
+    var play=setInterval(move,2000);
+
 
     // 위로가기 =========================================
-    // 위로가기 버튼을 일정 스크롤이 진행되면 보여주기
-    $(function(){
-        $(window).scroll(function(){
-            var scrollTop=$(this).scrollTop();
-            console.log(scrollTop);
-            if(scrollTop>200){
-                $('#goTop').addClass('on');
-            }else{
-                $('#goTop').removeClass('on');
-            }
-        })
-    
-        //위로가기 버튼을 누르면 가장 상위로 스크롤 이동 
-        $('#goTop').click(function(){   
-            var scrollTop=$(this).scrollTop();                                            
-            $('html, body').stop(true).animate({
-                scrollTop:0
-            })
+    $(window).scroll(function(){
+        var scrollTop=$(this).scrollTop();
+        console.log(scrollTop);
+        if(scrollTop>200){
+            $('#goTop').addClass('on');
+        }else{
+            $('#goTop').removeClass('on');
+        }
+    })
+
+    $('#goTop').click(function(){   
+        var scrollTop=$(this).scrollTop();                                            
+        $('html, body').stop(true).animate({
+            scrollTop:0
         })
     })
 
@@ -131,6 +118,7 @@ $(function(){
 
     $('.sp-menu').click(function(){
         $('.menu').addClass('open');
+        $('body').css('overflow','hidden');
     })
     $('.menuTop button').click(function(){
         $('.menu').removeClass('open');
@@ -138,11 +126,14 @@ $(function(){
         $('.category-nav a').removeClass();
         $('.category-nav ul').slideUp();
         $('.pop-search input').val('');
+        $('body').removeAttr('style');
     })
 
+    
     //  검색창 팝업
     $('.sp-search').click(function(){
         $('.pop-search').addClass('open');
+        $('body').css('overflow','hidden');
     })
 
     $('.pop-search .tab-nav li').click(function(e){
