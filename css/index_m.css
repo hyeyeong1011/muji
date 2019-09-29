@@ -210,8 +210,6 @@ header .gnb a:last-child{border-right: none;}
 .notice1 ul {
     overflow: hidden;
     height: 50px;
-    /* position: absolute; */
-    /* left: 78px; */
     margin: 0 40px 0 81px;
 }
 .notice1 ul li{line-height: 48px;}
@@ -479,9 +477,9 @@ footer button span.active{
 
 
 /* 장바구니 팝업 */
-.pop-cartpage{display: none;} 
+.pop-cartpage{display: none;}
 
-.pop-cartpage .menuTop{
+/* .pop-cartpage .menuTop{
     height: 40px; border-bottom: 1px solid #000;
     position: relative;
 }
@@ -512,7 +510,7 @@ footer button span.active{
     transform: translateY(-50%);
 }
 
-
+ */
 
 
 .pop{display: none;}
