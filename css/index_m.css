@@ -45,7 +45,11 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 
 /* header ======================================================= */
 header .head{height: 50px; background: #7f0019; position: relative;}
-header .head h1{text-align: center; line-height: 50px;}
+header .head h1{
+    position: absolute; 
+    left: 50%; top: 50%; 
+    transform: translate(-50%,-50%);
+}
 header .head button{position: absolute;}
 header .gnb{
     height: 40px; background: #f5eedd; overflow: hidden;
