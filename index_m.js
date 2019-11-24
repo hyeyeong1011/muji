@@ -22,7 +22,6 @@ $(function(){
         e.preventDefault();
     })
 
-
     $('#playStop').click(function(){
     if($(this).find('i').hasClass('sp-stop')){
         swiper1.autoplay.stop(); 
@@ -34,15 +33,14 @@ $(function(){
     })
 
 
-
     // 추천상품 ===============================================
     $('.product li').slice(0,6).show(); 
             
     $('.product>button').click(function(){
-        if($(this).text()=='접기'){//접기
+        if($(this).text()=='접기'){
             $('.product li').hide().slice(0,6).show();
             $(this).text('더보기');
-        }else{//더보기
+        }else{
             $('.product li:hidden').slice(0,6).slideDown();
             if($('.product li:hidden').length==0){
                 $(this).text('접기');
@@ -120,6 +118,7 @@ $(function(){
         $('.menu').addClass('open');
         $('body').css('overflow','hidden');
     })
+
     $('.menuTop button').click(function(){
         $('.menu').removeClass('open');
         $('.pop-search').removeClass('open');
@@ -130,6 +129,7 @@ $(function(){
     })
 
     
+
     //  검색창 팝업
     $('.sp-search').click(function(){
         $('.pop-search').addClass('open');
@@ -159,8 +159,4 @@ $(function(){
             $('#recent p').remove();
         }
     });
-
-
-
-
 })
