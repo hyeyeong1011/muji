@@ -5,9 +5,10 @@
 *{margin: 0; padding: 0;}
 a{text-decoration: none; color: #000;}
 li{list-style: none;}
-button{background: none; border: none;}
+button{border:none; background: none; cursor: pointer; outline: none;}
 .blind{font-size: 0; position: absolute; left: 9999px; text-indent: 9999px;}
 body{font-family: 'Nanum Gothic', sans-serif;}
+input{outline: none;}
 
 .sp{background: url(../img/sprite_m.png) no-repeat; display: inline-block; background-size: 500px 500px;}
 .sp-menu{background-position: 0px 0px; width: 30px; height: 30px; top: 10px; left: 16px;}
