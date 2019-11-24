@@ -3,6 +3,7 @@ $(function(){
     $('.fixed-nav #search').focus(function(){
         $('.popup-search').show();
     });
+
     $('.popup-control button').click(function(){
         $('.popup-search').hide();
     });
@@ -31,6 +32,7 @@ $(function(){
         }
     });
 
+
     // 카테고리 =====================================
     $('.category-nav > li').on('mouseenter',function(){
         $('.category-nav > li').removeClass('active');
@@ -43,6 +45,7 @@ $(function(){
         $('.category-nav > li').removeClass('active');
         $('.category-nav .wrap').stop().slideUp();   
     });
+
 
     // 퀵메뉴 =====================================
     $('.quick-nav .tab-nav li a').click(function(e){
@@ -64,7 +67,6 @@ $(function(){
 
 
     $('.quick-nav button:nth-of-type(2)').click(function(){
-        
         if($(this).hasClass('sp-left')){
             $(this).removeClass('sp-left').addClass('sp-right');
             $('.quick-nav').css({right:0, transition:'0.3s'});
@@ -82,8 +84,6 @@ $(function(){
 
     $('.quick-nav .contents span').each(function(){
         var long=$(this).text().length;
-        // console.log(long);
-        
         if(long>=6){
             var short=$(this).text().substr(0,6)+"...";
             $(this).text(short);
@@ -92,8 +92,6 @@ $(function(){
 
     $(function(){            
         var quickPosition=$('.quick-nav').offset().top;
-        // console.log(quickPosition);
-        
         $(window).scroll(function(){
             var scrollTop=$(this).scrollTop();
             $('.quick-nav').stop(true).animate({
@@ -102,15 +100,13 @@ $(function(){
             var noticeTop=$('.notice').offset().top-110;
             
             if(scrollTop>=noticeTop){
-                console.log('하단에 고정시키자');
-                
                 $('.quick-nav').stop(true).animate({
                     top:noticeTop+110
                 })
             }
-
         })
     })
+
 
     // footer ========================================
     $('footer .wrap button').click(function(){
@@ -119,38 +115,37 @@ $(function(){
 
 
     // 슬라이드 =======================================
-    $(function(){
-        var swiper1 = new Swiper('.swiper1', {
-            pagination: {
-                el: '.swiper1>.swiper-pagination',
-                clickable:true
-            },
-            navigation: {
-                nextEl: '.swiper1>.swiper-button-next',
-                prevEl: '.swiper1>.swiper-button-prev',
-            },
-            effect:'fade',
-            loop:true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: true,
-            },
-            on:{
-                sliderMove:function(){
-                    $('#playStop i').removeClass('sp-stop').addClass('sp-play');
-                }
-            },
-        });
+    var swiper1 = new Swiper('.swiper1', {
+        pagination: {
+            el: '.swiper1>.swiper-pagination',
+            clickable:true
+        },
+        navigation: {
+            nextEl: '.swiper1>.swiper-button-next',
+            prevEl: '.swiper1>.swiper-button-prev',
+        },
+        effect:'fade',
+        loop:true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+        },
+        on:{
+            sliderMove:function(){
+                $('#playStop i').removeClass('sp-stop').addClass('sp-play');
+            }
+        },
+    });
 
-        $('.swiper1 a').click(function(e){
-            e.preventDefault();
-        })
+    $('.swiper1 a').click(function(e){
+        e.preventDefault();
+    })
 
-        $('.swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet').click(function(){
-            $('#playStop i').removeClass('sp-stop').addClass('sp-play');
-        })
+    $('.swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet').click(function(){
+        $('#playStop i').removeClass('sp-stop').addClass('sp-play');
+    })
 
-        $('#playStop').click(function(){
+    $('#playStop').click(function(){
         if($(this).find('i').hasClass('sp-stop')){
             swiper1.autoplay.stop(); 
             $(this).find('i').removeClass('sp-stop').addClass('sp-play');
@@ -158,26 +153,22 @@ $(function(){
             swiper1.autoplay.start(); 
             $(this).find('i').removeClass('sp-play').addClass('sp-stop');
         }
-        })
     })
+
+
 
     // 추천상품 슬라이드 ====================================
-    $(function(){
-        var swiper2 = new Swiper('.swiper2', { 
-            slidesPerView: 5,               
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },                
-            loop:true
-        });
-
-    })
+    var swiper2 = new Swiper('.swiper2', { 
+        slidesPerView: 5,               
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },                
+        loop:true
+    });
 
     $('.product dl dt').each(function(){
         var long=$(this).text().length;
-        // console.log(long);
-        
         if(long>=12){
             var short=$(this).text().substr(0,12)+"...";
             $(this).text(short);
@@ -186,40 +177,33 @@ $(function(){
 
 
     // 팝업 ================================
-    $(function(){
-        $('.product .slide .sp-hvcart').click(function(e){
-            e.preventDefault();
-            $('.pop-cart').addClass('on');
-            $('.pop').after('<div class="popup-bg"></div>');
-        })
-        $('.product .slide .sp-hvwish').click(function(e){
-            e.preventDefault();
-            $('.pop-wish').addClass('on');
-            $('.pop').after('<div class="popup-bg"></div>');
-        })
-        $('.pop button.sp-close').click(function(){
-            $(this).parents('div').removeClass('on');
-            $('.popup-bg').remove();
-        })
-        $('body').on('click','.popup-bg',function(){               
-            $('.pop').removeClass('on');
-            $('.popup-bg').remove();
-        })
+    $('.product .slide .sp-hvcart').click(function(e){
+        e.preventDefault();
+        $('.pop-cart').addClass('on');
+        $('.pop').after('<div class="popup-bg"></div>');
     })
+    $('.product .slide .sp-hvwish').click(function(e){
+        e.preventDefault();
+        $('.pop-wish').addClass('on');
+        $('.pop').after('<div class="popup-bg"></div>');
+    })
+    $('.pop button.sp-close').click(function(){
+        $(this).parents('div').removeClass('on');
+        $('.popup-bg').remove();
+    })
+    $('body').on('click','.popup-bg',function(){               
+        $('.pop').removeClass('on');
+        $('.popup-bg').remove();
+    })
+
 
     // 공지 ======================================
     $('.notice .left .title').each(function(){
         var long=$(this).text().length;
-        // console.log(long);
-        
         if(long>=30){
             var short=$(this).text().substr(0,30)+"...";
             $(this).text(short);
         }
     })
-
-
-    
- 
 })
 
