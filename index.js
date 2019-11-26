@@ -89,22 +89,20 @@ $(function(){
             $(this).text(short);
         }
     })
-
-    $(function(){            
-        var quickPosition=$('.quick-nav').offset().top;
-        $(window).scroll(function(){
-            var scrollTop=$(this).scrollTop();
+        
+    var quickPosition=$('.quick-nav').offset().top;
+    $(window).scroll(function(){
+        var scrollTop=$(this).scrollTop();
+        $('.quick-nav').stop(true).animate({
+            top:scrollTop+quickPosition
+        },500)
+        var noticeTop=$('.notice').offset().top-110;
+        
+        if(scrollTop>=noticeTop){
             $('.quick-nav').stop(true).animate({
-                top:scrollTop+quickPosition
-            },500)
-            var noticeTop=$('.notice').offset().top-110;
-            
-            if(scrollTop>=noticeTop){
-                $('.quick-nav').stop(true).animate({
-                    top:noticeTop+110
-                })
-            }
-        })
+                top:noticeTop+110
+            })
+        }
     })
 
 
@@ -206,4 +204,3 @@ $(function(){
         }
     })
 })
-
