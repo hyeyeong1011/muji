@@ -154,7 +154,6 @@ $(function(){
     })
 
 
-
     // 추천상품 슬라이드 ====================================
     var swiper2 = new Swiper('.swiper2', { 
         slidesPerView: 5,               
