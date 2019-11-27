@@ -159,8 +159,8 @@ $(function(){
     var swiper2 = new Swiper('.swiper2', { 
         slidesPerView: 5,               
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.product .swiper-button-next',
+            prevEl: '.product .swiper-button-prev',
         },                
         loop:true
     });
@@ -204,3 +204,4 @@ $(function(){
         }
     })
 })
+
