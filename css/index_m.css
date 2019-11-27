@@ -273,7 +273,7 @@ header .gnb a:last-child{border-right: none;}
     box-sizing: border-box;
     position: relative;
 }
-.notice1 h3{
+.notice1 h2{
     font-size: 13px; 
     position: absolute; 
     left: 20px;
@@ -541,7 +541,7 @@ footer button span.active{
     height: 40px; 
     box-sizing: border-box;
 }
-.category .wrap h3{
+.category .wrap h2{
     line-height: 40px; 
     font-size: 16px; 
     color: #7f0019;
