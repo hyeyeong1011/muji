@@ -162,7 +162,7 @@ header .gnb a:last-child{border-right: none;}
     background: #a5a3a0; 
     color: #fff;
     font-size: 10px; 
-    line-height: 20px;
+    line-height: 22px;
     position: absolute;
     left: 50%; 
     transform: translateX(-50%); 
