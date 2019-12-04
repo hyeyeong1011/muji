@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
 
 /* reset, common ================================================================= */
 *{margin: 0; padding: 0;}
@@ -7,7 +7,7 @@ a{text-decoration: none; color: #000;}
 li{list-style: none;}
 button{border:none; background: none; cursor: pointer; outline: none;}
 .blind{font-size: 0; position: absolute; left: 9999px; text-indent: 9999px;}
-body{font-family: 'Nanum Gothic', sans-serif; min-width: 1200px; overflow-x: hidden;}
+body{font-family: 'Noto Sans KR', sans-serif; min-width: 1200px; overflow-x: hidden;}
 input{outline: none;}
 
 .center{width: 1200px; margin: auto; position: relative;}
@@ -204,7 +204,7 @@ header{background: #7f0019;}
     padding-right:60px; 
     color: #fff; 
     font-size: 20px; 
-    font-weight: bold;
+    font-weight: 500;
 }
 .gnb ul li:nth-child(4) a{padding-right: 0;}
 
@@ -402,11 +402,11 @@ header{background: #7f0019;}
     text-align: center; 
     font-size: 22px; 
     font-weight: bold; 
-    padding: 55px 0;
+    padding: 40px 0 40px 0;
 }
 .product .slide{
     position: relative; 
-    width: 1300px; 
+    width: 1240px; 
     margin: auto;
 }
 .product .slide .swiper-container{
@@ -461,6 +461,7 @@ header{background: #7f0019;}
 
 
 
+
 /* 특집메뉴 ====================================== */
 .special{
     overflow: hidden; 
@@ -491,7 +492,7 @@ header{background: #7f0019;}
 }
 .text-box span{
     font-size: 18px; 
-    font-weight: bold;
+    font-weight: 500;
 }
 .text-box p{
     font-size: 16px; 
@@ -543,7 +544,7 @@ header{background: #7f0019;}
 }
 .service ul span{
     font-size: 16px; 
-    font-weight: bold; 
+    font-weight: 500; 
     color: #fff;
     right: -150px;
     top: -80px;
@@ -634,7 +635,7 @@ header{background: #7f0019;}
 .notice .left h2{
     font-size: 18px; 
     font-weight: bold; 
-    margin: 25px 30px;
+    margin: 22px 30px;
 }
 .notice .left td.title{padding-right: 25px;}
 .notice .left button{
@@ -698,7 +699,7 @@ footer .wrap{
 footer .wrap .etc-nav li{display: inline-block;}
 footer .wrap .etc-nav a{
     font-size: 14px; 
-    font-weight: bold;
+    font-weight: 500;
 }
 footer .wrap button{
     width: 260px; 
@@ -720,7 +721,7 @@ footer .wrap .info{
     padding: 10px 20px; 
     box-sizing: border-box;
     position: absolute; 
-    top: 84px;
+    top: 89px;
     display: none;
 }
 footer .wrap .info b{line-height: 30px;}
