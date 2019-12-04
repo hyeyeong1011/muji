@@ -427,6 +427,7 @@ header{background: #7f0019;}
     top:50%;
     transform: translateY(-50%);
     background: none;
+    outline: none;
 }
 .product .slide .swiper-button-prev{left: 20px;}
 .product .slide .swiper-button-next{right: 20px;}
