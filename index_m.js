@@ -77,7 +77,6 @@ $(function(){
     // 위로가기 =========================================
     $(window).scroll(function(){
         var scrollTop=$(this).scrollTop();
-        console.log(scrollTop);
         if(scrollTop>200){
             $('#goTop').addClass('on');
         }else{
