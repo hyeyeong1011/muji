@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');
 
-/* reset, common ================================================================= */
+/* reset, common */
 *{margin: 0; padding: 0;}
 a{text-decoration: none; color: #000;}
 li{list-style: none;}
@@ -10,6 +10,8 @@ button{border:none; background: none; cursor: pointer; outline: none;}
 body{font-family: 'Nanum Gothic', sans-serif;}
 input{outline: none;}
 
+
+/* sprite */
 .sp{background: url(../img/sprite_m.png) no-repeat; display: inline-block; background-size: 500px 500px;}
 .sp-menu{background-position: 0px 0px; width: 30px; height: 30px; top: 10px; left: 16px;}
 .sp-search{background-position: -150px 0px; width: 30px; height: 30px; right: 45px; top: 10px;}
@@ -44,7 +46,9 @@ input{outline: none;}
 .sp-bigcart{background-position: -400px -200px; width: 70px; height: 70px;}
 .sp-smclose{background-position: -325px -50px; width: 13px; height: 13px;}
 
-/* header ======================================================= */
+
+
+/* header */
 header .head{
     height: 50px; 
     background: #7f0019; 
@@ -56,7 +60,9 @@ header .head h1{
     top: 50%; 
     transform: translate(-50%,-50%);
 }
-header .head button{position: absolute;}
+header .head button{
+    position: absolute;
+}
 header .gnb{
     height: 40px; 
     background: #f5eedd; 
@@ -74,19 +80,27 @@ header .gnb li{
     border-right: 1px solid #000;
     box-sizing: border-box;
 }
-header .gnb li:last-child{border: 0;}
-header .gnb a:last-child{border-right: none;}
+header .gnb li:last-child{
+    border: 0;
+}
+header .gnb a:last-child{
+    border-right: none;
+}
 
 
 
-/* 슬라이드 ==================================================================== */
-.main-slide{margin-bottom: 50px;}
+/* 메인 슬라이드 */
+.main-slide{
+    margin-bottom: 50px;
+}
 .main-slide .slide{
     position: relative;
     overflow: hidden;
     width: 100%;
 }
-.main-slide .slide img{width: 100%;}
+.main-slide .slide img{
+    width: 100%;
+}
 .main-slide .swiper-pagination{
     position: absolute;
     bottom: 15px; 
@@ -106,7 +120,9 @@ header .gnb a:last-child{border-right: none;}
     margin-right: 8px;
     opacity: 1;
 }
-.main-slide .swiper-pagination .swiper-pagination-bullet-active{background: #f5eedd;}
+.main-slide .swiper-pagination .swiper-pagination-bullet-active{
+    background: #f5eedd;
+}
 #playStop{
     position: absolute;
     left:50%; 
@@ -118,7 +134,7 @@ header .gnb a:last-child{border-right: none;}
 
 
 
-/* 추천상품 ======================================= */
+/* 추천상품 */
 .product{
     position: relative; 
     margin-bottom: 100px;
@@ -128,8 +144,12 @@ header .gnb a:last-child{border-right: none;}
     text-align: center; 
     margin-bottom: 30px;
 }
-.product .wrap img{width: 100%;}
-.product ul{overflow: hidden;}
+.product .wrap img{
+    width: 100%;
+}
+.product ul{
+    overflow: hidden;
+}
 .product ul li{
     float: left; 
     width: 50%; 
@@ -168,22 +188,30 @@ header .gnb a:last-child{border-right: none;}
     transform: translateX(-50%); 
     bottom: -30px;
 }
-.product li:nth-child(2n) .wrap{margin-left: 10px;}
-.product li:nth-child(2n-1) .wrap{margin-right: 10px;}
+.product li:nth-child(2n) .wrap{
+    margin-left: 10px;
+}
+.product li:nth-child(2n-1) .wrap{
+    margin-right: 10px;
+}
 
 
 
-/* 특집 =============================== */
+/* 특집 */
 .special h2{
     padding-left: 20px;
     font-size: 16px;
 }
-.special h2:nth-of-type(2){margin-top: 60px;}
+.special h2:nth-of-type(2){
+    margin-top: 60px;
+}
 .special ul li a{
     padding: 20px; 
     display: block;
 }
-.special ul li img{width: 100%;}
+.special ul li img{
+    width: 100%;
+}
 .special .text-box{
     height: 70px;
     border: 1px solid #000;
@@ -192,7 +220,9 @@ header .gnb a:last-child{border-right: none;}
     position: relative;
     top: -5px;
 }
-.special .text-box strong{font-size: 12px;}
+.special .text-box strong{
+    font-size: 12px;
+}
 .special .text-box p{
     font-size: 11px; 
     padding-top: 3px; 
@@ -201,7 +231,7 @@ header .gnb a:last-child{border-right: none;}
 
 
 
-/* 서비스 ================================= */
+/* 서비스 */
 .service{
     margin-top: 60px;
     background: #7f0019;
@@ -211,7 +241,9 @@ header .gnb a:last-child{border-right: none;}
     overflow: hidden;
     height: 280px;
 }
-.service .slide .swiper-container{height: 100%;}
+.service .slide .swiper-container{
+    height: 100%;
+}
 .service .slide .swiper-slide .wrap{
     position: relative; 
     margin-top: 60px;
@@ -265,7 +297,7 @@ header .gnb a:last-child{border-right: none;}
 
 
 
-/* 공지1 ============================================== */
+/* 공지1 */
 .notice1{
     width: 100%; 
     height: 50px; 
@@ -285,7 +317,9 @@ header .gnb a:last-child{border-right: none;}
     height: 50px;
     margin: 0 40px 0 81px;
 }
-.notice1 ul li{line-height: 48px;}
+.notice1 ul li{
+    line-height: 48px;
+}
 .notice1 ul li a{
     font-size: 12px;
     text-overflow: ellipsis;
@@ -300,7 +334,7 @@ header .gnb a:last-child{border-right: none;}
 
 
 
-/* 공지2 ========================================= */
+/* 공지2 */
 .notice2{
     height: 100px;
     background: #f5eedd;
@@ -326,7 +360,7 @@ header .gnb a:last-child{border-right: none;}
 
 
 
-/* footer =========================================== */
+/* footer */
 footer{
     position: relative;
     width: 100%; 
@@ -357,7 +391,9 @@ footer dl dd{
     font-size: 10px; 
     font-weight: bold;
 }
-footer dl dd:last-child{text-align: right;}
+footer dl dd:last-child{
+    text-align: right;
+}
 footer button{
     font-size: 10px; 
     outline: none;
@@ -409,14 +445,20 @@ footer .sns{
     left: 50%; 
     transform: translateX(-50%);
 }
-footer .sns a:first-child{margin-right: 5px;}
-footer .sns a:last-child{margin-left: 5px;}
+footer .sns a:first-child{
+    margin-right: 5px;
+}
+footer .sns a:last-child{
+    margin-left: 5px;
+}
 .fnb{
     height: 30px;
     border-top: 1px solid #000; 
     border-bottom: 1px solid #000;
 }
-.fnb ul{overflow: hidden;}
+.fnb ul{
+    overflow: hidden;
+}
 .fnb ul li{
     float: left; 
     font-size: 10px; 
@@ -447,6 +489,8 @@ footer button span.active{
 }
 
 
+
+/* 위로가기 버튼 */
 #goTop{
     position: fixed;
     bottom: 20px; 
@@ -463,7 +507,6 @@ footer button span.active{
 
 
 
-
 /* 전체메뉴 팝업 */
 .menu {
     background: #fff;
@@ -474,7 +517,9 @@ footer button span.active{
     right: 100%;
     z-index: 111;
 }
-.menu.open{right: 0;}
+.menu.open{
+    right: 0;
+}
 .menu .menuTop{
     height: 40px; 
     position: relative;
@@ -518,7 +563,9 @@ footer button span.active{
     border-bottom: 1px solid #000; 
     box-sizing: border-box;
 }
-.menu .row ul{overflow: hidden;}
+.menu .row ul{
+    overflow: hidden;
+}
 .menu .row ul li{
     float: left; 
     width: 25%; 
@@ -552,7 +599,6 @@ footer button span.active{
     padding-top: 15px; 
     border-top: 1px solid;
 }
-
 /* 1depth */
 .category-nav>li>a{
     height: 40px; 
@@ -566,7 +612,9 @@ footer button span.active{
     position: relative; 
     border-top: 1px solid #000;
 }
-.category-nav>li>a.active{background: #f5eedd;}
+.category-nav>li>a.active{
+    background: #f5eedd;
+}
 .category-nav>li>a>i{
     position: absolute;
     top: 50%; 
@@ -577,16 +625,18 @@ footer button span.active{
 .category-nav>li>a.active i{
     transform: translateY(-50%) rotateX(180deg) ;
 }
-
 /* 2depth */
 .category-nav li ul{
     font-size: 13px;
     padding: 0 0 15px 22px;
     display: none;
 }
-.category-nav li ul li{line-height: 30px;}
-.category-nav li ul.active{display: block;}
-
+.category-nav li ul li{
+    line-height: 30px;
+}
+.category-nav li ul.active{
+    display: block;
+}
 
 
 
@@ -594,7 +644,9 @@ footer button span.active{
     overflow: hidden; 
     border-top: 1px solid #000;
 }
-.etc-nav li:nth-of-type(2n) a{border-right: 0;}
+.etc-nav li:nth-of-type(2n) a{
+    border-right: 0;
+}
 .etc-nav li{
     float: left; 
     width: 50%; 
@@ -620,7 +672,9 @@ footer button span.active{
 
 
 /* 검색창 팝업 */
-.pop-search.open{left: 0;}
+.pop-search.open{
+    left: 0;
+}
 .pop-search{
     background: #fff;
     position: fixed;
@@ -666,17 +720,27 @@ footer button span.active{
     position: absolute; 
     margin-left: 5px;
 }
-.pop-search .tab .tab-nav{height: 50px;}
+.pop-search .tab .tab-nav{
+    height: 50px;
+}
 .pop-search .tab .tab-nav li{
     float: left; 
     width: 50%; 
     text-align: center;
     font-size: 17px;
 }
-.pop-search .tab .tab-nav li:first-child a{margin-left: 75px;}
-.pop-search .tab .tab-nav li:last-child a{margin-right: 75px;}
-.pop-search .tab .tab-nav li.active{font-weight: 900;}
-.pop-search .tab .contents>div{display: none;}
+.pop-search .tab .tab-nav li:first-child a{
+    margin-left: 75px;
+}
+.pop-search .tab .tab-nav li:last-child a{
+    margin-right: 75px;
+}
+.pop-search .tab .tab-nav li.active{
+    font-weight: 900;
+}
+.pop-search .tab .contents>div{
+    display: none;
+}
 #now ul li{
     font-weight: bold; 
     line-height: 50px; 
@@ -692,7 +756,9 @@ footer button span.active{
     line-height: 50px; 
     text-align: center;
 }
-#recent ul li button{margin-left: 10px;}
+#recent ul li button{
+    margin-left: 10px;
+}
 #recent p{
     text-align: center;
     margin-top: 50px;
